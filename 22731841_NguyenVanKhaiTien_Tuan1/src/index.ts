@@ -1,23 +1,25 @@
-class Book {
-  private title: string;
-  private author: string;
-  private year: number;
+class User {
+  private name: string;
 
-  constructor(title: string, author: string, year: number) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
+  constructor(name: string) {
+    this.name = name;
   }
 
-  
-  displayInfo(): void {
-    console.log(`Title: ${this.title}`);
-    console.log(`Author: ${this.author}`);
-    console.log(`Year: ${this.year}`);
+  public getName(): string {
+    return this.name;
+  }
+
+  public setName(newName: string): void {
+    if (newName.trim().length === 0) {
+      console.log("Tên không được để trống!");
+      return;
+    }
+    this.name = newName;
   }
 }
-const book1 = new Book("Lập Trình Java", "Nguyễn Văn A", 2021);
-book1.displayInfo();
-const book2 = new Book("Lập Trình JS", "Nguyễn Văn B", 2025);
-book2.displayInfo();
 
+const user1 = new User("Nguyễn Văn A");
+console.log("Tên ban đầu:", user1.getName());
+
+user1.setName("Trần Thị B");
+console.log("Tên sau khi đổi:", user1.getName());
