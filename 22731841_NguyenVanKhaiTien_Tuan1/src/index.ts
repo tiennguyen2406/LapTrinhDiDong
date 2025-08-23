@@ -1,34 +1,23 @@
-class BankAccount {
-  private balance: number;
+class Book {
+  private title: string;
+  private author: string;
+  private year: number;
 
-  constructor(balance: number) {
-    this.balance = balance;
+  constructor(title: string, author: string, year: number) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
   }
 
-  deposit(amount: number): void {
-    if (amount > 0) {
-      this.balance += amount;
-    } else {
-      console.log("Deposit amount must be positive!");
-    }
-  }
-  withdraw(amount: number): void {
-    if (amount > 0 && amount <= this.balance) {
-      this.balance -= amount;
-    } else {
-      console.log("Insufficient funds or invalid amount!");
-    }
-  }
-  getBalance(): number {
-    return this.balance;
+  
+  displayInfo(): void {
+    console.log(`Title: ${this.title}`);
+    console.log(`Author: ${this.author}`);
+    console.log(`Year: ${this.year}`);
   }
 }
-const b1 = new BankAccount(1000);
-console.log(`Tai khoan hien co : ${b1.getBalance()}`);
-b1.deposit(1000);
-console.log(`Tai khoan sau khi nap`);
-console.log(`Tai khoan hien co : ${b1.getBalance()}`);
-b1.withdraw(500);
-console.log(`Tai khoan sau khi rut`);
-console.log(`Tai khoan hien co : ${b1.getBalance()}`);
+const book1 = new Book("Lập Trình Java", "Nguyễn Văn A", 2021);
+book1.displayInfo();
+const book2 = new Book("Lập Trình JS", "Nguyễn Văn B", 2025);
+book2.displayInfo();
 
