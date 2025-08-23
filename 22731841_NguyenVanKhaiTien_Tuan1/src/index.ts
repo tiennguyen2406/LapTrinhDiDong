@@ -1,19 +1,34 @@
-class Rectangle{
-  width: number;
-  height: number;
+class BankAccount {
+  private balance: number;
 
-  constructor(width: number, height: number){
-    this.width = width;
-    this.height = height;
+  constructor(balance: number) {
+    this.balance = balance;
   }
 
-  area(): number{
-    return this.height*this.width;
+  deposit(amount: number): void {
+    if (amount > 0) {
+      this.balance += amount;
+    } else {
+      console.log("Deposit amount must be positive!");
+    }
   }
-  perimeter(): number {
-    return 2 * (this.width + this.height);
+  withdraw(amount: number): void {
+    if (amount > 0 && amount <= this.balance) {
+      this.balance -= amount;
+    } else {
+      console.log("Insufficient funds or invalid amount!");
+    }
+  }
+  getBalance(): number {
+    return this.balance;
   }
 }
- const r1 = new Rectangle(10,5);
-console.log(`Chu vi : ${r1.perimeter()}`);
-console.log(`Dien tich : ${r1.area()}`);
+const b1 = new BankAccount(1000);
+console.log(`Tai khoan hien co : ${b1.getBalance()}`);
+b1.deposit(1000);
+console.log(`Tai khoan sau khi nap`);
+console.log(`Tai khoan hien co : ${b1.getBalance()}`);
+b1.withdraw(500);
+console.log(`Tai khoan sau khi rut`);
+console.log(`Tai khoan hien co : ${b1.getBalance()}`);
+
