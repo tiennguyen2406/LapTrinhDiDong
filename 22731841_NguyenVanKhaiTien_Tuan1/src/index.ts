@@ -1,17 +1,19 @@
-class Car{
-  brand: string;
-  model: string;
-  year: string;
+class Rectangle{
+  width: number;
+  height: number;
 
-  constructor(brand: string, model: string, year: string){
-    this.brand = brand;
-    this.model = model;
-    this.year = year;
+  constructor(width: number, height: number){
+    this.width = width;
+    this.height = height;
   }
 
-  display(): void{
-    console.log(`Brand : ${this.brand},Model : ${this.model},Year : ${this.year}`)
+  area(): number{
+    return this.height*this.width;
+  }
+  perimeter(): number {
+    return 2 * (this.width + this.height);
   }
 }
-const c1 = new Car("Toyota","Luxury1","24/06/2025");
-c1.display()
+ const r1 = new Rectangle(10,5);
+console.log(`Chu vi : ${r1.perimeter()}`);
+console.log(`Dien tich : ${r1.area()}`);
