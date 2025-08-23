@@ -1,31 +1,17 @@
-class Person {
-  name: string;
-  age: number;
+class Car{
+  brand: string;
+  model: string;
+  year: string;
 
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
+  constructor(brand: string, model: string, year: string){
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
   }
 
-  displayInfo(): void {
-    console.log(`Name: ${this.name}, Age: ${this.age}`);
-  }
-}
-
-const p1 = new Person("Nguyen Van Khai Tien", 21);
-p1.displayInfo()
-
-class Student extends Person{
-  grade: string;
-
-  constructor(name: string, age: number, grade: string) {
-    super(name, age);
-    this.grade = grade;
-  }
-  displayAllInfo(): void {
-    console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+  display(): void{
+    console.log(`Brand : ${this.brand},Model : ${this.model},Year : ${this.year}`)
   }
 }
-
-const s2 = new Student("Nguyen Van A", 20, "A");
-s2.displayAllInfo();
+const c1 = new Car("Toyota","Luxury1","24/06/2025");
+c1.display()
