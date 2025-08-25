@@ -2,11 +2,11 @@
   "name": "typescript-project-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "src/Baitap/Bai14.ts",
+  "main": "src/Baitap/Bai15.ts",
   "scripts": {
-    "dev": "ts-node src/Baitap/Bai14.ts",
+    "dev": "ts-node src/Baitap/Bai15.ts",
     "build": "tsc",
-    "start:build": "node src/Bai14.js"
+    "start:build": "node src/Bai15.js"
   },
   "keywords": [],
   "author": "",
