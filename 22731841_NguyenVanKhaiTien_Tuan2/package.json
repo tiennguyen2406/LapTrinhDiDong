@@ -2,11 +2,11 @@
   "name": "typescript-project-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "src/A/Bai8.ts",
+  "main": "src/A/Bai9.ts",
   "scripts": {
-    "dev": "ts-node src/A/Bai8.ts",
+    "dev": "ts-node src/A/Bai9.ts",
     "build": "tsc",
-    "start:build": "node dist/Bai8.js"
+    "start:build": "node dist/Bai9.js"
   },
   "keywords": [],
   "author": "",
