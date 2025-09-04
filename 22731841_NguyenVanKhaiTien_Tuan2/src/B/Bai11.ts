@@ -1,4 +1,4 @@
-async function run() {
+export async function run() {
     const mess = await new Promise<string>((res)=>{
         setTimeout(()=>{
             res("Hello Async");
