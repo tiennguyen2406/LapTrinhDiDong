@@ -1,4 +1,4 @@
-async function tripleAfter1Sec(num: number): Promise<number> {
+export async function tripleAfter1Sec(num: number): Promise<number> {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return num * 3;
 }
