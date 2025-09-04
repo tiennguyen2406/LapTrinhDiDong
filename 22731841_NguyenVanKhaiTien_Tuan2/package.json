@@ -2,12 +2,12 @@
   "name": "typescript-project-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "src/A/Bai10.ts",
+  "main": "",
   "scripts": {
-    "dev": "ts-node src/A/Bai10.ts",
-    "build": "tsc",
-    "start:build": "node dist/Bai10.js"
-  },
+  "run": "node runner.js",
+  "build": "tsc",
+  "start:build": "node dist/Bai11.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
