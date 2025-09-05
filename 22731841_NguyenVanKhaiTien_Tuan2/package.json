@@ -5,8 +5,7 @@
   "main": "",
   "scripts": {
   "run": "node runner.js",
-  "build": "tsc",
-  "start:build": "node dist/Bai11.js"
+  "build": "tsc"
 },
   "keywords": [],
   "author": "",
